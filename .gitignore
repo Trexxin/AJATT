@@ -1,0 +1,5 @@
+# Scraped data stays local; only the hand-picked samples are committed.
+data/*
+!data/samples/
+__pycache__/
+.pytest_cache/
