@@ -105,6 +105,7 @@ Windows PowerShell:
 ```powershell
 $env:LLM_BASE_URL = "http://dh-dgxh100-2.hpc.msoe.edu:8000/v1"
 $env:LLM_MODEL = "meta/llama-4-scout-17b-16e-instruct"
+$env:OPENAI_API_KEY = "not-needed"
 ```
 
 macOS/Linux:
@@ -112,9 +113,11 @@ macOS/Linux:
 ```bash
 export LLM_BASE_URL="http://dh-dgxh100-2.hpc.msoe.edu:8000/v1"
 export LLM_MODEL="meta/llama-4-scout-17b-16e-instruct"
+export OPENAI_API_KEY="not-needed"
 ```
 
 You must be on the network that can resolve and reach `dh-dgxh100-2.hpc.msoe.edu`. Any variables needed can also be placed in a `.env` file at the repository root.
+`OPENAI_API_KEY` may be set to `not-needed` for this local endpoint; use a real API key for an authenticated endpoint.
 
 ## 6. Run the RAG pipeline
 
