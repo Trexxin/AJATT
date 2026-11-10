@@ -1,14 +1,14 @@
 # prototype/generate.py
 from openai import OpenAI
 
-from config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL
+from config import LLM_BASE_URL, LLM_MODEL
 
-client = OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
+client = OpenAI(base_url=LLM_BASE_URL)
 
 
 def call_llm(prompt: str) -> str:
     response = client.chat.completions.create(
-        model=LLM_MODEL,
+        model=LLM_MODEL or "",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.0,
     )
