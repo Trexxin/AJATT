@@ -1,9 +1,8 @@
-# prototype/generate.py
 from openai import OpenAI
 
-from config import LLM_BASE_URL, LLM_MODEL
+from config import LLM_BASE_URL, LLM_MODEL, OPENAI_API_KEY
 
-client = OpenAI(base_url=LLM_BASE_URL)
+client = OpenAI(api_key=OPENAI_API_KEY, base_url=LLM_BASE_URL)
 
 
 def call_llm(prompt: str) -> str:

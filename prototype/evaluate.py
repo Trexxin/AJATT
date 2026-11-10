@@ -1,4 +1,3 @@
-# prototype/evaluate.py
 import json
 from datasets import Dataset
 from ragas import evaluate

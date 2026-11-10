@@ -10,3 +10,6 @@ EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 TOP_K = 10
 LLM_BASE_URL = os.getenv("LLM_BASE_URL")
 LLM_MODEL = os.getenv("LLM_MODEL")
+# OpenAI-compatible local endpoints still require the client option to be set,
+# even when the server does not authenticate requests.
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "not-needed")

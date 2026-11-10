@@ -1,4 +1,3 @@
-# prototype/pipeline.py
 from retrieve import retrieve
 from generate import generate_answer
 
