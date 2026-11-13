@@ -184,4 +184,4 @@ each item.
 | `prototype/retrieve.py` | Hybrid dense/sparse retrieval with reciprocal rank fusion |
 | `prototype/generate.py` | OpenAI-compatible LLM client and grounded prompt |
 | `prototype/pipeline.py` | Retrieval plus answer generation |
-| `prototype/evaluate.py` | RAGAS evaluation |
+| `prototype/evaluate.py` | Evaluation metrics (faithfullness, relevance, refusal accuracy) |
