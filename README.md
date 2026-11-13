@@ -12,36 +12,44 @@ The project has two stages:
 
 ## Requirements
 
-- Python 3.10 or newer
+- Running on a node in Rosie (setup remote ssh viewing in VSCODE or ssh on to Rosie)
+- Python 3.12.11
 - Network access to the HPC LLM endpoint for answer generation
-- The dependencies in `prototype/requirements.txt`
+- The dependencies in `requirements.txt`
 
 Run all commands below from the repository root (`AJATT`), not from `prototype/`. The scripts
 use paths relative to the repository root.
 
-## 1. Set up the environment
+## 1. Clone the repository
 
-Create and activate a virtual environment, then install the prototype dependencies:
+Clone the repository and enter its root directory:
+
+```bash
+git clone https://github.com/Trexxin/AJATT.git
+cd AJATT
+```
+
+## 2. Set up the environment
+
+Confirm that Python 3.12.11 is available:
+
+```bash
+python --version
+```
+
+Create and activate a virtual environment, then install both dependency manifests:
 
 ```bash
 python -m venv .venv
-```
-
-Windows PowerShell:
-
-```powershell
-.venv\Scripts\Activate.ps1
-pip install -r prototype\requirements.txt
-```
-
-macOS/Linux:
-
-```bash
 source .venv/bin/activate
-pip install -r prototype/requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-## 2. Get and parse the blog data
+The virtual environment must remain active for the remaining commands. If it is deactivated,
+run `source .venv/bin/activate` again from the repository root.
+
+## 3. Get and parse the blog data
 
 The original site is down. A community-run copy is available at
 <https://alljapanesealltheti.me/blog/> and is served from the
@@ -65,7 +73,7 @@ This creates `data/processed/posts.jsonl`, which is the input consumed by the RA
 Downloaded HTML is stored under `data/raw/posts/`. Existing downloads are skipped, so an
 interrupted scrape can be resumed.
 
-## 3. Build the retrieval indexes
+## 4. Build the retrieval indexes
 
 Run the index script after parsing the posts:
 
@@ -83,7 +91,7 @@ The script chunks the posts and creates:
 Re-run this command whenever `data/processed/posts.jsonl` changes. The first run downloads
 the embedding model and may take several minutes.
 
-## 4. Test retrieval without the LLM
+## 5. Test retrieval without the LLM
 
 Once the index files exist, run the retrieval smoke test:
 
@@ -95,31 +103,27 @@ It searches for a sample question and prints the top matching excerpts and their
 rank-fusion scores. The `retrieve` function can also be imported by code that runs with
 `prototype/` on its Python path.
 
-## 5. Configure the LLM endpoint
+## 6. Configure the LLM endpoint
 
 The generator uses the OpenAI-compatible `/v1/chat/completions` endpoint hosted on the HPC
-node. Set these variables in the same shell used to run the pipeline:
-
-Windows PowerShell:
-
-```powershell
-$env:LLM_BASE_URL = "http://dh-dgxh100-2.hpc.msoe.edu:8000/v1"
-$env:LLM_MODEL = "meta/llama-4-scout-17b-16e-instruct"
-$env:OPENAI_API_KEY = "not-needed"
-```
-
-macOS/Linux:
+node. Configure the endpoint by copying the example file to `.env`:
 
 ```bash
-export LLM_BASE_URL="http://dh-dgxh100-2.hpc.msoe.edu:8000/v1"
-export LLM_MODEL="meta/llama-4-scout-17b-16e-instruct"
-export OPENAI_API_KEY="not-needed"
+cp .env_example .env
 ```
 
-You must be on the network that can resolve and reach `dh-dgxh100-2.hpc.msoe.edu`. Any variables needed can also be placed in a `.env` file at the repository root.
-`OPENAI_API_KEY` may be set to `not-needed` for this local endpoint; use a real API key for an authenticated endpoint.
+The example uses the default HPC endpoint and model. Edit `.env` if you need different values:
 
-## 6. Run the RAG pipeline
+```dotenv
+LLM_BASE_URL="http://dh-dgxh100-2.hpc.msoe.edu:8000/v1"
+LLM_MODEL="meta/llama-4-scout-17b-16e-instruct"
+```
+
+You must be on the network that can resolve and reach `dh-dgxh100-2.hpc.msoe.edu`. The
+application defaults `OPENAI_API_KEY` to `not-needed` for this local endpoint. Add
+`OPENAI_API_KEY` to `.env` if you use an authenticated endpoint, and do not commit `.env`.
+
+## 7. Run the RAG pipeline
 
 Run the built-in sample questions:
 
@@ -141,15 +145,19 @@ for source in sources:
     print(source["title"], source["url"])
 ```
 
-## 7. Run the evaluation
+## 8. Run the evaluation
 
 Create `prototype/eval_questions.json` with evaluation items in this format:
 
 ```json
 [
   {
-    "question": "What is sentence mining?",
-    "ground_truth": "The expected answer based on the AJATT archive."
+    "id": "q01",
+    "split": "dev",
+    "question": "What should I do when I don't understand everything while immersing?",
+    "ground_truth": "AJATT recommends continuing to expose yourself to Japanese even when you do not understand everything. The goal of immersion is frequent exposure, not complete comprehension, so material that keeps you engaged is valuable even when parts are hard to follow.",
+    "gold_slugs": ["why-you-should-keep-listening-even-if-you-dont-understand"],
+    "expected_refusal": false
   }
 ]
 ```

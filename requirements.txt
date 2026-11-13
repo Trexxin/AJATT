@@ -1,2 +1,11 @@
 requests
 beautifulsoup4
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+rank-bm25>=0.2.2
+numpy>=1.26
+python-dotenv>=1.0
+openai>=1.0
+ragas>=0.2
+datasets>=2.20       
+tqdm>=4.66

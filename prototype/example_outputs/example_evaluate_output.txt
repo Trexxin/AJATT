@@ -1,0 +1,32 @@
+command: 
+srun --partition=teaching --gres=gpu:t4:1 python prototype/evaluate.py
+
+output:
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7100.23it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+=== Evaluating 12 items (split=all) ===
+
+--- Retrieval ---
+dense-only    Hit@1=0.00  Hit@3=0.27  Hit@5=0.36  Hit@10=0.45  MRR=0.15   (n=11)
+sparse-only   Hit@1=0.00  Hit@3=0.18  Hit@5=0.18  Hit@10=0.36  MRR=0.11   (n=11)
+hybrid-RRF    Hit@1=0.09  Hit@3=0.27  Hit@5=0.27  Hit@10=0.36  MRR=0.19   (n=11)
+
+--- Generation ---
+Faithfulness (1-5):   4.64
+Relevance    (1-5):   4.91
+Refusal accuracy:     1.00
+
+--- Per-question ---
+[q01] F=5 R=5  — What should I do when I don't understand everything while immersing?
+[q02] F=4 R=5  — How does AJATT recommend learning vocabulary?
+[q03] F=5 R=5  — What is sentence mining?
+[q04] F=5 R=5  — How should I use an SRS for Japanese?
+[q05] F=5 R=5  — How do I stay consistent with my Japanese study?
+[q06] F=4 R=4  — Should I learn Japanese characters first or words first?
+[q07] F=5 R=5  — What does AJATT say about studying grammar rules?
+[q08] F=5 R=5  — How do I learn multiple languages without getting them mixed up?
+[q09] F=5 R=5  — What is critical frequency in language exposure?
+[q10] F=4 R=5  — How can I make learning Japanese more fun?
+[q11] F=4 R=5  — Is it OK to fail while learning Japanese?
+[q12] REFUSED  — What does AJATT say about learning Korean grammar?
