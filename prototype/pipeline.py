@@ -13,7 +13,8 @@ if __name__ == "__main__":
         "How does AJATT recommend learning vocabulary?",
         "What should I do when I don't understand everything while immersing?",
         "What is sentence mining?",
-        "How should I use an SRS?",
+        "What does AJATT say about learning Korean grammar?",
+        "How should I use an SRS?", # add more or less questions as you see fit...
     ]
     for q in questions:
         print("=" * 70)

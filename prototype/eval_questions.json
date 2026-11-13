@@ -1,7 +1,98 @@
 [
   {
+    "id": "q01",
+    "split": "dev",
     "question": "What should I do when I don't understand everything while immersing?",
-    "ground_truth": "AJATT recommends continuing to expose yourself to Japanese even when you do not understand everything. The goal is frequent exposure, not complete comprehension.",
-    "gold_slugs": ["why-you-should-keep-listening-even-if-you-dont-understand"]
+    "ground_truth": "AJATT recommends continuing to expose yourself to Japanese even when you do not understand everything. The goal of immersion is frequent exposure, not complete comprehension, so material that keeps you engaged is valuable even when parts are hard to follow.",
+    "gold_slugs": ["why-you-should-keep-listening-even-if-you-dont-understand"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "How does AJATT recommend learning vocabulary?",
+    "ground_truth": "AJATT recommends learning vocabulary through sentences rather than isolated words, using an SRS to review sentence cards taken from real input.",
+    "gold_slugs": ["10000-sentences-how", "10000-sentences-input-before-output"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "What is sentence mining?",
+    "ground_truth": "Sentence mining is the practice of extracting one unknown word or structure from a sentence you have encountered in real input, and turning that sentence into an SRS card.",
+    "gold_slugs": ["10000-sentences-how"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "How should I use an SRS for Japanese?",
+    "ground_truth": "An SRS (spaced repetition system) schedules reviews so you see items just before you would forget them, and AJATT recommends using it for sentences rather than isolated vocabulary.",
+    "gold_slugs": ["what-is-an-srs"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "How do I stay consistent with my Japanese study?",
+    "ground_truth": "AJATT emphasizes simply showing up every day; consistency matters more than intensity or perfect method, and doing something small daily beats sporadic effort.",
+    "gold_slugs": ["showing-up"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Should I learn Japanese characters first or words first?",
+    "ground_truth": "AJATT recommends learning characters first, then the meanings of words, then phrases built from those words, rather than trying to learn 'the language' directly.",
+    "gold_slugs": ["dont-try-to-learn-a-language"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q07",
+    "split": "test",
+    "question": "What does AJATT say about studying grammar rules?",
+    "ground_truth": "AJATT argues that language is not physics, and treating grammar as a set of rules to be memorized is the wrong model; grammar should be absorbed through exposure rather than studied in the abstract.",
+    "gold_slugs": ["the-problem-with-grammar-language-isnt-physics"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q08",
+    "split": "test",
+    "question": "How do I learn multiple languages without getting them mixed up?",
+    "ground_truth": "AJATT describes a 'laddering' method where one language is used as the bridge to the next, so learning a new language through one you already know reduces interference.",
+    "gold_slugs": ["how-to-learn-multiple-languages-without-getting-confused-the-laddering-method"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q09",
+    "split": "test",
+    "question": "What is critical frequency in language exposure?",
+    "ground_truth": "Critical frequency refers to the idea that certain words or structures appear so often that mastering them has outsized leverage; exposure to high-frequency items matters more than rare ones.",
+    "gold_slugs": ["critical-frequency-a-brand-new-way-of-looking-at-language-exposure"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q10",
+    "split": "test",
+    "question": "How can I make learning Japanese more fun?",
+    "ground_truth": "AJATT argues that enjoyment should drive the process; activities that trigger flow and dopamine, like games or engaging media, make sustained learning sustainable.",
+    "gold_slugs": ["the-goldeneye-principle-flow-dopamine-spirituality-and-how-to-make-everything-as-fun-as-video-games-and-multiplayer-bedroom-sports"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q11",
+    "split": "test",
+    "question": "Is it OK to fail while learning Japanese?",
+    "ground_truth": "AJATT advocates aiming to fail — making mistakes and falling short is treated as part of the process, not a sign the method is wrong.",
+    "gold_slugs": ["aim-to-fail"],
+    "expected_refusal": false
+  },
+  {
+    "id": "q12",
+    "split": "test",
+    "question": "What does AJATT say about learning Korean grammar?",
+    "ground_truth": "The AJATT archive is focused on Japanese; it does not provide specific guidance on Korean grammar. The system should decline to answer rather than hallucinate.",
+    "gold_slugs": [],
+    "expected_refusal": true
   }
 ]

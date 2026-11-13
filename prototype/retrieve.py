@@ -41,6 +41,18 @@ def retrieve(query: str, top_k: int = TOP_K, dense_k: int = 50, sparse_k: int = 
         results.append(chunk)
     return results
 
+# the following functions for testing and evaluation of the RAG system
+
+def dense_only(query: str, top_k: int = 10):
+    qv = _encoder.encode([query], normalize_embeddings=True).astype(np.float32)
+    _, idx = _index.search(qv, top_k)
+    return [_chunks[int(i)] for i in idx[0] if i != -1]
+
+def sparse_only(query: str, top_k: int = 10):
+    tokens = query.lower().split()
+    idx = _bm25.get_top_n(tokens, list(range(len(_chunks))), n=top_k)
+    return [_chunks[int(i)] for i in idx]
+
 if __name__ == "__main__":
     q = "What should I do when I don't understand everything while immersing?"
     for r in retrieve(q):
