@@ -152,8 +152,12 @@ Create `prototype/eval_questions.json` with evaluation items in this format:
 ```json
 [
   {
-    "question": "What is sentence mining?",
-    "ground_truth": "The expected answer based on the AJATT archive."
+    "id": "q01",
+    "split": "dev",
+    "question": "What should I do when I don't understand everything while immersing?",
+    "ground_truth": "AJATT recommends continuing to expose yourself to Japanese even when you do not understand everything. The goal of immersion is frequent exposure, not complete comprehension, so material that keeps you engaged is valuable even when parts are hard to follow.",
+    "gold_slugs": ["why-you-should-keep-listening-even-if-you-dont-understand"],
+    "expected_refusal": false
   }
 ]
 ```
