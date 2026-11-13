@@ -1,0 +1,93 @@
+command: 
+srun --partition=teaching --gres=gpu:t4:1 python prototype/pipeline.py
+
+
+output:
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1195.23it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+======================================================================
+Q: How does AJATT recommend learning vocabulary?
+
+ANSWER:
+ According to AJATT, one way to learn vocabulary is through the "10,000 Sentences" method, where learners learn sentences with the following requirements: 
+1. Read it in full, aloud, with kanji, no furigana.
+2. Know the meaning of every word in the sentence.
+3. Understand the meaning of the entire sentence.
+4. Write (copy) out the sentence by hand (Excerpt 2: 10,000 Sentences: How, https://alljapanesealltheti.me/blog/10000-sentences-how/). 
+
+Additionally, AJATT recommends learning vocabulary in context, such as learning nouns with verbs that act on them, adverbs with verbs, and adjectives with nouns (Excerpt 9: Isn’t Real Japanese Too Hard for Beginners?, https://alljapanesealltheti.me/blog/isnt-real-japanese-too-hard-for-beginners/). 
+
+AJATT also suggests surrounding yourself with real Japanese, such as TV, movies, and music, to learn vocabulary and get comfortable with the sounds, rhythms, and pronunciation of the language (Excerpt 9: Isn’t Real Japanese Too Hard forBeginners?, https://alljapanesealltheti.me/blog/isnt-real-japanese-too-hard-for-beginners/). 
+
+AJATT's SilverSpoon program also provides learners with frequency-based target vocabulary lists and detailed instructions on specific words and word types to learn in the context of SRSing (Excerpt 5: AJATT SilverSpoon: You Will Be Fluent in Japanese 595 Days From Now, https://alljapanesealltheti.me/blog/you-will-be-fluent-in-japanese-595-days-from-now-let-me-take-you-there/).
+
+SOURCES:
+  - What Is AJATT Plus? (https://alljapanesealltheti.me/blog/what-is-ajatt-plus/)
+  - 10,000 Sentences: How (https://alljapanesealltheti.me/blog/10000-sentences-how/)
+  - How to Use the Sanseido Web Dictionary (https://alljapanesealltheti.me/blog/how-to-use-the-sanseido-web-dictionary/)
+======================================================================
+Q: What should I do when I don't understand everything while immersing?
+
+ANSWER:
+ According to AJATT, when you don't understand everything while immersing, you should calm down and not get frustrated. As stated in "Calm Down and Hurry Up" (https://alljapanesealltheti.me/blog/calm-down-and-hurry-up/), it's normal to not understand everything at first, but with consistent effort, you'll start to pick up words and sentences.
+
+In "What It’s Like In The Beginning When You Don’t Know Jack. Or, How To Watch Japanese TV" (https://alljapanesealltheti.me/blog/whats-its-like-in-the-beginning-and-you-dont-know-jack-or-how-to-watch-japanese-tv/), it's suggested that you focus on picking up one word at a time, looking up the word, and getting an example sentence with that word in it. Then, go back to watching or listening and repeat the process.
+
+Additionally, in "How To Enjoy Movies You Don’t Understand, Like A Kid" (https://alljapanesealltheti.me/blog/how-to-enjoy-movies-you-dont-understand-like-a-kid/), it's recommended to change your approach to watching movies or listening to content you don't understand. Instead of focusing on understanding the plot, try people-watching, observing facial expressions, intonation, and background details. This can help make the experience more enjoyable and allow you to still benefit from the immersion.
+
+According to AJATT, the key is to be consistent, patient, and not get discouraged if you don't understand everything right away.
+
+SOURCES:
+  - Calm Down and Hurry Up (https://alljapanesealltheti.me/blog/calm-down-and-hurry-up/)
+  - What It’s Like In The Beginning When You Don’t Know Jack. Or, How To Watch Japanese TV. (https://alljapanesealltheti.me/blog/whats-its-like-in-the-beginning-and-you-dont-know-jack-or-how-to-watch-japanese-tv/)
+  - It Worked For Me, Why Not You? The Success Story of a Frenchman In The Netherlands Who Learned English (and Now Japanese) The AJATT Way (https://alljapanesealltheti.me/blog/it-worked-for-me-why-not-you-the-success-story-of-a-frenchman-in-the-netherlands-who-learned-english-and-now-japanese-the-ajatt-way/)
+======================================================================
+Q: What is sentence mining?
+
+ANSWER:
+ According to AJATT, sentence mining, also referred to as sentence picking, is the process of collecting and learning sentences in Japanese that are interesting and relevant to you. As stated in "How To Banish Boredom from Sentence-Mining (Sentence-Picking)" (https://alljapanesealltheti.me/blog/how-to-banish-boredom-from-sentence-mining-sentence-picking/), "your goal is not to collect every sentence to which you have access, your goal is to collect sentences that are interesting to you." 
+
+Additionally, in "Secrets to Smoother SRSing, Part 4: Collect ‘Em to Throw Away" (https://alljapanesealltheti.me/blog/secrets-to-smoother-srsing-part-4-collect-em-to-throw-away/), Khatzumoto explains that sentence mining is like mining for diamonds, where you sift through a lot of material to find a few valuable sentences that are worth learning. He also suggests that "sentence picking" is a better term, using the analogy of picking berries, where you only pick the ripe and juicy ones. 
+
+In "10,000 Sentences: Why" (https://alljapanesealltheti.me/blog/10000-sentences-why/), it's mentioned that learning thousands of real Japanese sentences will eventually give you a "feel" for what is and is not correct Japanese. 
+
+Overall, sentence mining is about selectively collecting and learning sentences that help you improve your Japanese language skills.
+
+SOURCES:
+  - 10,000 Sentences: Why (https://alljapanesealltheti.me/blog/10000-sentences-why/)
+  - How To Banish Boredom from Sentence-Mining (Sentence-Picking) (https://alljapanesealltheti.me/blog/how-to-banish-boredom-from-sentence-mining-sentence-picking/)
+  - Learning Japanese = Playing a Video Game, Part 1 (https://alljapanesealltheti.me/blog/learning-japanese-playing-a-video-game-part-1/)
+======================================================================
+Q: What does AJATT say about learning Korean grammar?
+
+ANSWER:
+ I don't have enough information in the AJATT archive to answer that. 
+
+However, according to [Excerpt 2] from "Surrogate Mother: The Proper, Correct And Only Way To Do Private Tutoring", in language learning, "what?" and "how?" matter more than "why?" — most of the “whys” are either unknown, ignored, or fiercely contested. But the “whats” and “hows” are an immediate reality. 
+
+Also, [Excerpt 10] from "Book Review: Absolutely DO NOT Study English! A Korean AntiMoon in Japanese" mentions a book that suggests, when learning a language, to start by accepting it as "sound without meaning" and then imitate these sounds, just as sounds, regardless of whether you understand them or not. 
+
+But for specific information on learning Korean grammar, I don't have enough information in the AJATT archive to answer that.
+
+SOURCES:
+  - Surrogate Mother: The Proper, Correct And Only Way To Do Private Tutoring (https://alljapanesealltheti.me/blog/the-real-way-to-use-a-private-tutor/)
+  - Surrogate Mother: The Proper, Correct And Only Way To Do Private Tutoring (https://alljapanesealltheti.me/blog/the-real-way-to-use-a-private-tutor/)
+  - Taking A Break: The Third Way (https://alljapanesealltheti.me/blog/taking-a-break-the-third-way/)
+======================================================================
+Q: How should I use an SRS?
+
+ANSWER:
+ According to AJATT, an SRS, or spaced repetition system, is a tool that helps with long-term memorization of large quantities of information through spaced repetitions. To use an SRS effectively, you should use it daily and create well-formed question-answer pairs. The key is not which SRS you use, but that you actually use one and use it every day (Excerpt 9: What is an SRS? https://alljapanesealltheti.me/blog/what-is-an-srs/). 
+
+When using an SRS, it's also important to not make it the main course, but rather a tool to aid in language learning. You should listen to your feelings and not do something that doesn't feel right. Don't ask for approval or try to follow instructions exactly, but rather play and experiment with different formats (Excerpt 6: Secrets to Smoother SRSing, Part 7: The Place of Pre-Mined SRSing and Other Ramblings https://alljapanesealltheti.me/blog/secrets-to-smoother-srsing-part-7-the-place-of-pre-mined-srsing-and-other-ramblings/). 
+
+Additionally, when creating SRS cards, you can use various sources such as input from native Japanese, like websites, dictionaries, and forums. When selecting sentences, pick ones that stretch your knowledge slightly, not too much or too little. You can also try different formats, such as having the SRS prompt be a reading and the answer be a writing, or vice versa (Excerpt 10: 10,000 Sentences: Answers To Questions https://alljapanesealltheti.me/blog/10000-sentences-where/, Excerpt 8: Chinese Project Notes 8: Ch-Ch-Changes + Stuff That Applies to Japanese, Too https://alljapanesealltheti.me/blog/chinese-project-notes-8-ch-ch-changes-stuff-that-applies-to-japanese-too/). 
+
+It's also recommended to write out sentences, or parts of them that you get wrong, each time you miss them in your SRS. This can help impress the sentences upon your memory (Excerpt 1: About SRS/Sentence Writing Practice https://alljapanesealltheti.me/blog/about-srssentence-writing-practice/). 
+
+Overall, the most important thing is to use the SRS in a way that is fun and enjoyable for you, and to not get too caught up in trying to follow a specific method or format.
+
+SOURCES:
+  - About SRS/Sentence Writing Practice (https://alljapanesealltheti.me/blog/about-srssentence-writing-practice/)
+  - Chinese Project Notes 8: Ch-Ch-Changes + Stuff That Applies to Japanese, Too (https://alljapanesealltheti.me/blog/chinese-project-notes-8-ch-ch-changes-stuff-that-applies-to-japanese-too/)
+  - URL Shuffler (https://alljapanesealltheti.me/blog/url-shuffler/)
