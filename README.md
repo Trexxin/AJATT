@@ -131,6 +131,13 @@ Run the built-in sample questions:
 python prototype/pipeline.py
 ```
 
+Or ask your own. Put each question in quotes after the script name:
+
+```bash
+python prototype/pipeline.py "How do I start learning kanji?"
+python prototype/pipeline.py "What is an MCD?" "How much should I listen every day?"
+```
+
 For each question, the pipeline retrieves the top passages, builds a citation-focused prompt,
 calls the configured chat-completions endpoint, and prints the answer and source posts.
 
